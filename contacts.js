@@ -47,7 +47,7 @@ async function addContact(name, email, phone) {
     const parseData = JSON.parse(data);
     const lastId = parseData.slice(-1)[0].id;
     const newContact = {
-      id: JSON.stringify(Number(lastId) + 1),
+      id: (Number(lastId) + 1).toString(),
       name,
       email,
       phone,
